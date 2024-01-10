@@ -1,6 +1,6 @@
 export async function update(id: bigint, payload: editForm | FormData) {
-    const validated = await editFormValidator.validateAsync(payload);
-  
+ //Validator middlewares   
+const validated = await editFormValidator.validateAsync(payload);
     const previouSportIds = await db.property_sport.findMany({
       where: {
         property_id: id,
