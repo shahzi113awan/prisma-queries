@@ -21,7 +21,7 @@ export async function update(id: bigint, payload: editForm | FormData) {
     });
   
     //Nation disconnect
-  
+  //No need to filter out the ids we are deleting all and then connecting new ones
     const previouNationIds = await db.property_nation.findMany({
       where: {
         property_id: id,
